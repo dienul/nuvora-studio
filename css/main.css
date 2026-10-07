@@ -1,0 +1,7 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.min-vh-75 {
+    min-height: 85vh;
+}
