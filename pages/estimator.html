@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Cost Estimator | Nuvora Studio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="../index.html">
+                    Nuvora Studio
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">
+                                Portfolio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="estimator.html"
+                            >
+                                Cost Estimator
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-dark" href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="py-5 bg-light">
+            <div class="container py-lg-5 text-center">
+
+                <p class="text-uppercase fw-semibold mb-2">
+                    Project Cost Estimator
+                </p>
+
+                <h1 class="display-5 fw-bold mb-3">
+                    Estimate Your Project Cost
+                </h1>
+
+                <p class="lead text-secondary mx-auto">
+                    Select your project type, number of pages,
+                    and additional features to get a quick
+                    estimated project cost.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Estimator -->
+        <section class="py-5 bg-white">
+            <div class="container">
+
+                <div class="row g-5">
+
+                    <!-- Estimator Form -->
+                    <div class="col-lg-7">
+
+                        <div class="card border-0 shadow-sm">
+
+                            <div class="card-body p-4 p-lg-5">
+
+                                <p class="text-uppercase fw-semibold mb-2">
+                                    Project Details
+                                </p>
+
+                                <h2 class="h3 fw-bold mb-4">
+                                    Tell Us About Your Project
+                                </h2>
+
+
+                                <form id="estimatorForm">
+
+                                    <!-- Project Type -->
+                                    <div class="mb-4">
+
+                                        <label
+                                            for="projectType"
+                                            class="form-label fw-semibold"
+                                        >
+                                            Project Type
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="projectType"
+                                            name="projectType"
+                                            required
+                                        >
+                                            <option value="" selected disabled>
+                                                Select project type
+                                            </option>
+
+                                            <option value="landing-page">
+                                                Landing Page
+                                            </option>
+
+                                            <option value="company-profile">
+                                                Company Profile
+                                            </option>
+
+                                            <option value="portfolio">
+                                                Portfolio Website
+                                            </option>
+
+                                            <option value="ecommerce">
+                                                E-Commerce Website
+                                            </option>
+                                        </select>
+
+                                    </div>
+
+
+                                    <!-- Number of Pages -->
+                                    <div class="mb-4">
+
+                                        <label
+                                            for="numberOfPages"
+                                            class="form-label fw-semibold"
+                                        >
+                                            Number of Pages
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="numberOfPages"
+                                            name="numberOfPages"
+                                            min="1"
+                                            max="30"
+                                            value="1"
+                                            required
+                                        >
+
+                                        <div class="form-text">
+                                            Enter the estimated number of pages
+                                            for your website.
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Additional Features -->
+                                    <div class="mb-4">
+
+                                        <p class="form-label fw-semibold">
+                                            Additional Features
+                                        </p>
+
+
+                                        <div class="form-check mb-2">
+
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="seo"
+                                                name="features"
+                                                value="seo"
+                                            >
+
+                                            <label
+                                                class="form-check-label"
+                                                for="seo"
+                                            >
+                                                SEO Setup
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="form-check mb-2">
+
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="contactForm"
+                                                name="features"
+                                                value="contact-form"
+                                            >
+
+                                            <label
+                                                class="form-check-label"
+                                                for="contactForm"
+                                            >
+                                                Contact Form
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="form-check mb-2">
+
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="blog"
+                                                name="features"
+                                                value="blog"
+                                            >
+
+                                            <label
+                                                class="form-check-label"
+                                                for="blog"
+                                            >
+                                                Blog
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="form-check mb-2">
+
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="uiux"
+                                                name="features"
+                                                value="uiux"
+                                            >
+
+                                            <label
+                                                class="form-check-label"
+                                                for="uiux"
+                                            >
+                                                UI/UX Design
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="form-check">
+
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="maintenance"
+                                                name="features"
+                                                value="maintenance"
+                                            >
+
+                                            <label
+                                                class="form-check-label"
+                                                for="maintenance"
+                                            >
+                                                Website Maintenance
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Delivery -->
+                                    <div class="mb-4">
+
+                                        <label
+                                            for="delivery"
+                                            class="form-label fw-semibold"
+                                        >
+                                            Delivery Time
+                                        </label>
+
+                                        <select
+                                            class="form-select"
+                                            id="delivery"
+                                            name="delivery"
+                                            required
+                                        >
+                                            <option value="standard">
+                                                Standard - 14 Days
+                                            </option>
+
+                                            <option value="priority">
+                                                Priority - 7 Days
+                                            </option>
+
+                                            <option value="express">
+                                                Express - 3 Days
+                                            </option>
+                                        </select>
+
+                                    </div>
+
+
+                                    <!-- Calculate Button -->
+                                    <button
+                                        type="submit"
+                                        class="btn btn-dark btn-lg w-100"
+                                    >
+                                        Calculate Estimate
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Estimate Result -->
+                    <div class="col-lg-5">
+
+                        <div class="card border-0 bg-light">
+
+                            <div class="card-body p-4 p-lg-5">
+
+                                <p class="text-uppercase fw-semibold mb-2">
+                                    Your Estimate
+                                </p>
+
+                                <h2 class="h3 fw-bold mb-4">
+                                    Estimated Project Cost
+                                </h2>
+
+
+                                <!-- Empty State -->
+                                <div id="estimateEmpty">
+
+                                    <p class="text-secondary">
+                                        Complete the project details
+                                        and click
+                                        <strong>Calculate Estimate</strong>
+                                        to see your estimated project cost.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Result -->
+                                <div
+                                    id="estimateResult"
+                                    class="d-none"
+                                >
+
+                                    <p class="text-secondary mb-2">
+                                        Estimated Cost
+                                    </p>
+
+                                    <p
+                                        id="estimatedPrice"
+                                        class="display-6 fw-bold mb-4"
+                                    >
+                                        Rp0
+                                    </p>
+
+
+                                    <hr>
+
+
+                                    <div class="d-flex justify-content-between mb-2">
+
+                                        <span class="text-secondary">
+                                            Project Type
+                                        </span>
+
+                                        <span
+                                            id="resultProjectType"
+                                            class="fw-semibold"
+                                        >
+                                            -
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-between mb-2">
+
+                                        <span class="text-secondary">
+                                            Number of Pages
+                                        </span>
+
+                                        <span
+                                            id="resultPages"
+                                            class="fw-semibold"
+                                        >
+                                            -
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-between mb-4">
+
+                                        <span class="text-secondary">
+                                            Delivery
+                                        </span>
+
+                                        <span
+                                            id="resultDelivery"
+                                            class="fw-semibold"
+                                        >
+                                            -
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="small text-secondary mb-0">
+                                        This price is an estimate and may
+                                        change depending on the final
+                                        project requirements.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Help -->
+                        <div class="card border-0 mt-4">
+
+                            <div class="card-body p-4">
+
+                                <h3 class="h5 fw-bold">
+                                    Need More Information?
+                                </h3>
+
+                                <p class="text-secondary">
+                                    Contact us to discuss your project
+                                    requirements in more detail.
+                                </p>
+
+                                <a
+                                    href="contact.html"
+                                    class="btn btn-outline-dark"
+                                >
+                                    Contact Us
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="py-5 bg-light">
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="text-uppercase fw-semibold mb-2">
+                        How It Works
+                    </p>
+
+                    <h2 class="fw-bold">
+                        Get Your Estimate in 3 Steps
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-4 text-center">
+
+                    <div class="col-md-4">
+
+                        <div class="p-4">
+
+                            <div class="fs-2 fw-bold mb-3">
+                                01
+                            </div>
+
+                            <h3 class="h5 fw-bold">
+                                Choose Your Project
+                            </h3>
+
+                            <p class="text-secondary mb-0">
+                                Select the type of website
+                                you want to build.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="p-4">
+
+                            <div class="fs-2 fw-bold mb-3">
+                                02
+                            </div>
+
+                            <h3 class="h5 fw-bold">
+                                Select Features
+                            </h3>
+
+                            <p class="text-secondary mb-0">
+                                Choose the additional features
+                                required for your project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="p-4">
+
+                            <div class="fs-2 fw-bold mb-3">
+                                03
+                            </div>
+
+                            <h3 class="h5 fw-bold">
+                                Get Your Estimate
+                            </h3>
+
+                            <p class="text-secondary mb-0">
+                                Get an estimated project cost
+                                instantly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CTA -->
+        <section class="py-5 bg-dark text-white">
+            <div class="container">
+
+                <div class="text-center py-4">
+
+                    <h2 class="fw-bold mb-3">
+                        Ready to Start Your Project?
+                    </h2>
+
+                    <p class="text-white-50 mb-4">
+                        Let's discuss your requirements and
+                        turn your idea into a digital experience.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-light btn-lg"
+                    >
+                        Start Your Project
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-top">
+
+        <div class="container py-5">
+
+            <div class="row g-4">
+
+                <!-- Company -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h3 class="h5 fw-bold">
+                        Nuvora Studio
+                    </h3>
+
+                    <p class="text-secondary mb-0">
+                        Build Better. Grow Digital.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-6 col-md-3 col-lg-2">
+
+                    <h4 class="h6 fw-bold">
+                        Quick Links
+                    </h4>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a
+                                href="../index.html"
+                                class="text-secondary text-decoration-none"
+                            >
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a
+                                href="services.html"
+                                class="text-secondary text-decoration-none"
+                            >
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a
+                                href="portfolio.html"
+                                class="text-secondary text-decoration-none"
+                            >
+                                Portfolio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="about.html"
+                                class="text-secondary text-decoration-none"
+                            >
+                                About
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Services -->
+                <div class="col-6 col-md-3 col-lg-3">
+
+                    <h4 class="h6 fw-bold">
+                        Services
+                    </h4>
+
+                    <ul class="list-unstyled text-secondary">
+
+                        <li class="mb-2">
+                            Web Development
+                        </li>
+
+                        <li class="mb-2">
+                            Landing Page
+                        </li>
+
+                        <li class="mb-2">
+                            UI/UX Design
+                        </li>
+
+                        <li>
+                            Website Maintenance
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-md-6 col-lg-3">
+
+                    <h4 class="h6 fw-bold">
+                        Contact
+                    </h4>
+
+                    <ul class="list-unstyled text-secondary">
+
+                        <li class="mb-2">
+                            hello@nuvorastudio.com
+                        </li>
+
+                        <li>
+                            Jakarta, Indonesia
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="border-top">
+
+            <div class="container py-3 text-center">
+
+                <small class="text-secondary">
+                    © 2026 Nuvora Studio. All rights reserved.
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- Estimator JS -->
+    <script src="../js/estimator.js"></script>
+
+</body>
+</html>
